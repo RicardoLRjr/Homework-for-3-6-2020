@@ -35,17 +35,17 @@ var upperCaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"
 "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 // Defines uppercase characters. 
 
-var allConfirm = [upperCaseCharacters, lowerCaseCharacters, numberCharacters, specialCharacters]
-var SNLc = [lowerCaseCharacters, numberCharacters, specialCharacters]
-var SNUc = [upperCaseCharacters, numberCharacters, specialCharacters]
-var SLcUc = [upperCaseCharacters, lowerCaseCharacters, specialCharacters]
-var NLcUc = [numberCharacters, lowerCaseCharacters, specialCharacters]
-var SN = [numberCharacters, specialCharacters]
-var SLc = [lowerCaseCharacters, specialCharacters]
-var SUc = [specialCharacters, upperCaseCharacters]
-var NLc = [numberCharacters, lowerCaseCharacters]
-var Nuc = [numberCharacters, upperCaseCharacters]
-var LcUc = [lowerCaseCharacters, upperCaseCharacters]
+var allConfirm = [upperCaseCharacters + lowerCaseCharacters + numberCharacters + specialCharacters]
+var SNLc = [lowerCaseCharacters + numberCharacters + specialCharacters]
+var SNUc = [upperCaseCharacters + numberCharacters + specialCharacters]
+var SLcUc = [upperCaseCharacters + lowerCaseCharacters + specialCharacters]
+var NLcUc = [numberCharacters + lowerCaseCharacters + specialCharacters]
+var SN = [numberCharacters + specialCharacters]
+var SLc = [lowerCaseCharacters +  specialCharacters]
+var SUc = [specialCharacters + upperCaseCharacters]
+var NLc = [numberCharacters + lowerCaseCharacters]
+var Nuc = [numberCharacters + upperCaseCharacters]
+var LcUc = [lowerCaseCharacters + upperCaseCharacters]
 
 var passLength = parseInt(prompt("How long do you want your password to be? (must be an integer between 8 and 128)"));
 // Defines password length
@@ -92,3 +92,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword); 
+
+
+// Current errors:
+// Need to figure out how to select random elements of the array, instead of just... random array. for loop?
+// Code is very repetitive
