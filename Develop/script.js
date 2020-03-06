@@ -1,21 +1,32 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
-// Variables
 alert("You need a new password")
-var passLength = parseInt(prompt("How long do you want your password to be? (must be between 8 and 128 characters)"));
+// Variables
+
+var passLength = parseInt(prompt("How long do you want your password to be? (must be an integer between 8 and 128)"));
 // Defines password length
-var specialCharacters = [" !#$%&()*+,-./:;<=>?@[\]^_`{|}~"];
+console.log(passLength)
+var specialCharacters = ["!",",","#","$", "%", "&", "(",")", "*","+","-",",","."/":",";",","<",","=",">","?",
+"@","[","/","]","^","_","`","{","|","}","~"];
+console.log(specialCharacters)
 // Defines special characters (sourced from https://owasp.org/www-community/password-special-characters)
 var specialCharactersQuery = confirm("Do you want special characters?");
+console.log(specialCharactersQuery)
 // Confirms if user wants special characters in their password, if yes includes, if no does not. 
-var numberCharactersQuery = confirm("Do you want numbers?")
+var numbercharacters = ["1","2","3","4","5","6","7","8","9","0"]
+console.log(numbercharacters)
+var numberCharactersQuery = confirm("Do you want numbers?");
+console.log(numberCharactersQuery)
 // Confirms if user wants numbers in their password, if yes includes, if no does not.
-var lowerCaseCharactersQuery = confirm("Do you want lower case characters?")
+var lowerCaseCharactersQuery = confirm("Do you want lower case characters?");
+console.log(lowerCaseCharactersQuery)
 // Confirms if user wants lowercase characters in their password, if yes includes, if no does not.
-var upperCaseCharactersQuery = confirm("Do you want upper case characters?")
+var upperCaseCharactersQuery = confirm("Do you want upper case characters?");
+console.log(upperCaseCharactersQuery)
 // Confirms if user wants uppercase characters in their password, if yes includes, if no does not.
+// var userPassword = ;
+// Final password.
 
 
 // Generate Password
@@ -27,7 +38,10 @@ var upperCaseCharactersQuery = confirm("Do you want upper case characters?")
   // 4.uppercase
   // generate password based on user specifications:
   // Note: user specifications come from confirms. (save in variables)
-  // 
+
+
+
+
   // for(var i = 0; i = <=  ; i++) {
 
 
@@ -36,7 +50,7 @@ var upperCaseCharactersQuery = confirm("Do you want upper case characters?")
 
   function generatePassword(){
   
-return "something";
+return "test";
 }
 
 // Write password to the #password input
