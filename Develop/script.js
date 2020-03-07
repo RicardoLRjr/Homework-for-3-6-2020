@@ -129,7 +129,6 @@ var actualPass = [];
 
 // Function that generates password according to parameters selected.
 function generatePassword() {
-  for (var i = 0; i <= passLength; i++) {
     var matchedParameterValues = [];
     for (var i = 0; i <= passLength; i++) {
       if (numberCharactersQuery)
@@ -165,7 +164,7 @@ function generatePassword() {
       return "your password is " + actualPass.join("");
     }
   }
-}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
