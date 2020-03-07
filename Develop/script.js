@@ -125,7 +125,7 @@ var passLength = parseInt(
     "How long do you want your password to be? (must be an integer between 8 and 128)"
   )
 );
-console.log(passLength)
+console.log(passLength);
 // Defines password length
 
 // Generate Password
@@ -138,27 +138,32 @@ console.log(passLength)
 // generate password based on user specifications:
 // Note: user specifications come from confirms. (save in variables)
 
-// Figure out how to deny access or reload page if password does not meet parameters
+var actualPass = [];
 
 function generatePassword() {
 
   var matchedParameterValues = []; 
-  
-  if (numberCharactersQuery = true) matchedParameterValues = matchedParameterValues.concat(numberCharacters);
-  if (upperCaseCharactersQuery = true) matchedParameterValues = matchedParameterValues.concat(upperCaseCharacters);
-  if (lowerCaseCharactersQuery = true) matchedParameterValues = matchedParameterValues.concat(lowerCaseCharacters);
-  if (specialCharactersQuery = true) matchedParameterValues = matchedParameterValues.concat(specialCharacters);
-  
-  
 
+  if (numberCharactersQuery) matchedParameterValues = matchedParameterValues.concat(numberCharacters);
+  if (upperCaseCharactersQuery) matchedParameterValues = matchedParameterValues.concat(upperCaseCharacters);
+  if (lowerCaseCharactersQuery) matchedParameterValues = matchedParameterValues.concat(lowerCaseCharacters);
+  if (specialCharactersQuery) matchedParameterValues = matchedParameterValues.concat(specialCharacters);
+  
       
   if (passLength < 8 || passLength > 128) {
     alert("Follow password length instructions please! To get a new password, refresh the page");
   } 
   else{
    for (var i = 0; i <= passLength; i++){
-    var indexNum = (Math.floor(Math.random() * passLength))
-    return "your password is " +  matchedParameterValues[indexNum];}
+     Math.floor(Math.random() + i);
+     for (var j = 0; j <= passLength; j++){
+      var indexNum = (Math.floor(Math.random() * 10 + 1));
+     }
+    var Pass2 = matchedParameterValues[indexNum]
+    actualPass.push(Pass2)
+    console.log(actualPass.join(""));
+     return ("your password is " + actualPass.join(""));
+  }
    }
   }
 
